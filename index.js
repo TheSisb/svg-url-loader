@@ -27,10 +27,10 @@ module.exports = function(content) {
 		}
 		
 		return 'module.exports = ' + JSON.stringify(data);
-	} else {
-		var fileLoader = require("file-loader");
-		return fileLoader.call(this, content);
-	}
+	} 
+	
+	var fileLoader = require("file-loader");
+	return fileLoader.call(this, content);
 };
 
 module.exports.raw = true;
